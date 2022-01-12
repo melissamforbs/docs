@@ -33,7 +33,7 @@ jobs:
           git rm -rf --quiet translations/*/data
 
       - name: Sync
-        uses: crowdin/github-action@d0622816ed4f4744db27d04374b2cef6867f7bed
+        uses: crowdin/github-action@bbde0c35efd6abc84d36e132fa0a2ad07d0e1f29
         with:
           # This option enables the transfer of existing translations in this project to Crowdin.
           # We explicitly set this to `false` since we only want to use the downloaded translations managed by Crowdin.
