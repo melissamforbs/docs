@@ -89,7 +89,7 @@ jobs:
 
       - name: Create a Heroku build source
         id: build-source
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
         env:
           HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
         with:
@@ -144,7 +144,7 @@ jobs:
         run: .github/actions-scripts/prod-deploy.js
 
       - name: Mark the deployment as inactive if timed out
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
         if: ${{ steps.deploy.outcome == 'cancelled' }}
         env:
           DEPLOYMENT_ID: ${{ steps.deploy.outputs.deploymentId }}
