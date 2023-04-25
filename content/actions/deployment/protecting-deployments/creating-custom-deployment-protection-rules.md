@@ -40,7 +40,7 @@ Alternatively, you can write your own protection rules for any of the above use 
    ![A screenshot of the "Repository permissions" section when creating a new GitHub App. The button to configure permissions, with the "read-only" permission selected, for Actions is highlighted by a dark orange rectangle.](/assets/images/help/actions/actions-repo-permissions-read-only.png)
    1. To the right of "Deployments," click the drop down menu and select **Access: Read and write**.
    ![A screenshot of the "Deployments" permission settings in the "Repository permissions" section while creating a new GitHub App. The button to configure permissions, with the "read-only" permission selected, for Deployments is highlighted by a dark orange rectangle.](/assets/images/help/actions/actions-deployments-repo-permissions-read-and-write.png)
-   1. Under "Subscribe to events,"f select **Deployment protection rule**.
+   1. Under "Subscribe to events," select **Deployment protection rule**.
    ![A screenshot of the "Subscribe to events section" section while creating a new GitHub App. The checkbox to subscribe to the deployment protection rule event is highlighted by a dark orange rectangle.](/assets/images/help/actions/actions-subscribe-to-events-deployment-protection-rules.png)
 
 1. Install the custom deployment protection rule in your repositories and enable it for use. For more information, see "[AUTOTITLE](/actions/deployment/protecting-deployments/configuring-custom-deployment-protection-rules)."
@@ -71,7 +71,7 @@ Once a workflow reaches a job that references an environment that has the custom
 
 1. To approve or reject a request, send a `POST` request to `/repos/OWNER/REPO/actions/runs/RUN_ID/deployment_protection_rule`. In the request body, set the `state` property to either `approved` or `rejected`. For more information, see "[AUTOTITLE](/rest/actions/workflow-runs#review-custom-deployment-protection-rules-for-a-workflow-run)."
 
-1. Optionally, request the status of an approval for a workflow run by sending a `GET` request to `/repositories/REPOSITORY_ID/actions/runs/RUN_ID/approvals`. For more information, see "[AUTOTITLE](/rest/actions/workflow-runs#get-the-review-history-for-a-workflow-run)."
+1. Optionally, request the status of an approval for a workflow run by sending a `GET` request to `/repos/OWNER/REPOSITORY_ID/actions/runs/RUN_ID/approvals`. For more information, see "[AUTOTITLE](/rest/actions/workflow-runs#get-the-review-history-for-a-workflow-run)."
 
 1. Optionally, review the deployment on {% data variables.product.prodname_dotcom_the_website %}. For more information, see "[AUTOTITLE](/actions/managing-workflow-runs/reviewing-deployments)."
 
