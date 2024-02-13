@@ -1,4 +1,23 @@
 {
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false
+    "gitlens.codeLens.scopes": [
+        "containers",
+        "document",
+        "blocks"
+    ],
+    "gitlens.heatmap.locations": [
+        "gutter",
+        "overview",
+        "line"
+    ],
+    "gitlens.graph.showRemoteNames": true,
+    "gitlens.views.contributors.showAllBranches": true,
+    "gitlens.rebaseEditor.ordering": "desc",
+    "gitlens.sortBranchesBy": "name:desc",
+    "gitlens.sortContributorsBy": "count:desc",
+    "eslint.debug": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.problems.shortenToSingleLine": true,
+    "eslint.useESLintClass": true
 }
+
