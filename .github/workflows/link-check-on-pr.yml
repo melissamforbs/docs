@@ -52,7 +52,7 @@ jobs:
         run: node .github/actions-scripts/rendered-content-link-checker.js
 
       - name: Upload artifact(s)
-        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882
         with:
           name: artifacts
           path: ./artifacts
