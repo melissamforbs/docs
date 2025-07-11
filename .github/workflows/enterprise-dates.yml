@@ -50,7 +50,7 @@ jobs:
 
       - name: Create pull request
         id: create-pull-request
-        uses: peter-evans/create-pull-request@5b4a9f6a9e2af26e5f02351490b90d01eb8ec1e5 # pin @v5.0.0
+        uses: peter-evans/create-pull-request@70a41aba780001da0a30141984ae2a0c95d8704e # pin @v6.0.2
         env:
           # Disable pre-commit hooks; they don't play nicely here
           HUSKY: '0'
