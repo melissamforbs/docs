@@ -34,16 +34,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
 
       - uses: ./.github/actions/node-npm-setup
 
       - name: Purge Fastly edge cache independent of language
-        if: ${{ github.event.inputs.nuke_all }}
+        if: ${{ inputs.nuke_all }}
         run: .github/actions-scripts/purge-fastly-edge-cache.js
 
       - name: Purge Fastly edge cache per language
-        if: ${{ !github.event.inputs.nuke_all }}
+        if: ${{ !inputs.nuke_all }}
         env:
-          LANGUAGES: ${{ github.event.inputs.languages }}
+          LANGUAGES: ${{ inputs.languages }}
         run: .github/actions-scripts/purge-fastly-edge-cache-per-language.js
