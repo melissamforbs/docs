@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: Check if the event originated from a team member
-        uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         id: set-result
         with:
           github-token: ${{secrets.DOCS_BOT_PAT_WORKFLOW_READORG}}
@@ -69,7 +69,7 @@ jobs:
 
     steps:
       - name: Remove card from project
-        uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           github-token: ${{secrets.DOCS_BOT_PAT_WORKFLOW_READORG}}
           result-encoding: string

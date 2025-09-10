@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: membership_check
-        uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
         with:
           github-token: ${{ secrets.DOCS_BOT_PAT_WORKFLOW_READORG }}
           script: |
